@@ -1,20 +1,32 @@
 *, * > * {
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 body, .navigation {
+  height: 100%;
   display: flex;
   flex-direction: row-reverse;
 }
 
-.header {
-  margin-inline-start: auto;
+h1, h2, h3, h4, p {
+  font-weight: 100;
 }
 
+.header {
+  margin-inline-start: auto;
+  width: min-content;
+}
+
+.navigation {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+
 .nav-link  {
-  min-height: 100vh;
-  height: 100%;
   padding: 60px 5px;
   font-family: sans-serif;
   min-width: 60px;
@@ -44,3 +56,26 @@ body, .navigation {
   background-color: lightskyblue;
 }
 
+.h1 {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.h1 h1 {
+    font-size: clamp(2em, 10vh, 8em);
+    max-width: 4em;
+  }
+
+  .hero {
+	background-image: url("https://images.prismic.io/canalstreetmarket/1d99cf0e3a0144c1229f92ee5b3c63b0eaae893c_home-hero.jpg?auto=compress,format");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	min-height: 60vh;
+
+  }
+
+  .h1 p {
+    font-size: clamp(1em, 8vh, 4em);
+    max-width: 10em;
+  }
