@@ -218,10 +218,19 @@ main {
 	background-position: 0 0,0 100%,left 14px,0 calc(100% - 14px);
 	background-repeat: repeat-x,repeat-x,repeat-x,repeat-x;
 	background-size: 24px 1px,24px 1px,24px 1px,24px 1px;
+    animation: .8s infinite normal c;
+    animation-timing-function: linear;
   }
 
- 
+  @keyframes c {
+  0% {
+	background-position-x: 0,0; 
+  }
 
+  100% {
+	background-position-x: 24px,-24px;
+  }
+}
 
 @media only screen and (max-width: 50em) {
   .events {
