@@ -37,8 +37,13 @@ h2 {
 p {
 line-height: var(--line-h);
 letter-spacing: var(--letter-spacing);
-
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 
 .sticky {
   position: sticky;
@@ -86,6 +91,17 @@ letter-spacing: var(--letter-spacing);
   width: min-content;
   order: 3;
 }
+
+
+.grid-three {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3,1fr);
+  grid-column-gap: 60px;
+}
+
+
 
 .navigation {
   height: 100%;
@@ -173,4 +189,25 @@ main {
 
   .picture-3 .bg-image {
 	background-image: url("https://images.prismic.io/canalstreetmarket/13a988aff3e9c672350fe8330eb7386c3a85eeb9_home_page_three.jpg?auto=compress,format");
+  }
+
+  .market-events {
+	text-align: center;
+  }
+
+  .market-events h2 {
+	margin-inline: auto;
+	margin-block-start: var(--margin);
+  }
+
+  .events {
+	padding-block: calc(var(--padding)*4);
+	padding-inline: var(--padding);
+	position: relative;
+	background-image: linear-gradient(90deg,#000 50%,transparent 0),linear-gradient(90deg,#000 50%,transparent 0),linear-gradient(90deg,#000 50%,transparent 0),linear-gradient(90deg,#000 50%,transparent 0);
+	background-position: 0 0,0 100%,left 14px,0 calc(100% - 14px);
+	background-repeat: repeat-x,repeat-x,repeat-x,repeat-x;
+	background-size: 24px 1px,24px 1px,24px 1px,24px 1px;
+	animation: .8s infinite normal c;
+	animation-timing-function: linear;
   }
