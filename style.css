@@ -24,6 +24,16 @@ h1, h2, h3, h4, p {
   font-weight: 100;
 }
 
+h1 {
+    font-size: clamp(2em, 10vh, 8em);
+    max-width: 4em;
+  }
+
+h2 {
+    font-size: clamp(1.5em, 8vh, 6em);
+    max-width: 4em;
+  }
+
 p {
 line-height: var(--line-h);
 letter-spacing: var(--letter-spacing);
@@ -128,11 +138,6 @@ main {
   display: flex;
   flex-direction: column-reverse;
 }
-
-.h1 h1 {
-    font-size: clamp(2em, 10vh, 8em);
-    max-width: 4em;
-  }
 
   .hero {
 	background-image: url("https://images.prismic.io/canalstreetmarket/1d99cf0e3a0144c1229f92ee5b3c63b0eaae893c_home-hero.jpg?auto=compress,format");
