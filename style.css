@@ -3,6 +3,8 @@
   --height: 1.5em;
   --margin: calc(var(--height)*1);
   --padding: calc(var(--height)*1);
+  --gap: var(--height);
+  --letter-spacing: 0.2em;
 }
 
 
@@ -24,6 +26,8 @@ h1, h2, h3, h4, p {
 
 p {
 line-height: var(--line-h);
+letter-spacing: var(--letter-spacing);
+
 }
 
 .sticky {
@@ -44,6 +48,27 @@ line-height: var(--line-h);
   width: 90%;
   margin-inline: auto;
   min-width: 300px;
+}
+
+.flex {
+  display: flex;
+  gap: var(--gap);
+  flex-wrap: wrap;
+}
+
+.two > *, .three > *{
+  flex-grow: 1;
+  flex-basis: calc(( 16em - 35%) * 999);
+}
+
+.two > :nth-last-child(n+ 3),
+.two > :nth-last-child(n+ 3) ~ * {
+  flex-basis: 100%;
+}
+
+.three  > :nth-last-child(n+ 4),
+.three  > :nth-last-child(n+ 4) ~ * {
+  flex-basis: 100%;
 }
 
 .header {
@@ -120,5 +145,27 @@ main {
 
   .h1 p {
     font-size: clamp(1em, 8vh, 4em);
-    max-width: 10em;
+   max-width: 10em;
+   letter-spacing: initial;
+  }
+
+  .picture .bg-image {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+    background-size: cover;
+    background-position: 50%;
+    z-index: 1;
+	height: 60vh;
+  }
+
+  .picture-1 .bg-image {
+    background-image: url("https://images.prismic.io/canalstreetmarket/8f74dfabde9ebd66d0d078ba6cf794c77dc8ac5b_home_page_one.jpg?auto=compress,format");
+  }
+
+  .picture-2 .bg-image {
+	background-image: url("https://images.prismic.io/canalstreetmarket/20c7997073b456fda0e6de872d23b6183892bdde_home_page_two.jpg?auto=compress,format");
+  }
+
+  .picture-3 .bg-image {
+	background-image: url("https://images.prismic.io/canalstreetmarket/13a988aff3e9c672350fe8330eb7386c3a85eeb9_home_page_three.jpg?auto=compress,format");
   }
