@@ -34,6 +34,12 @@ h2 {
     max-width: 4em;
   }
 
+h3 {
+    font-size: clamp(1.25em, 6vh, 4em);
+    max-width: 4em;
+  }
+
+
 p {
 line-height: var(--line-h);
 letter-spacing: var(--letter-spacing);
@@ -92,6 +98,11 @@ a {
   order: 3;
 }
 
+.grid-two {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: var(--gap); 
+  }
 
 .grid-three {
   display: grid;
@@ -100,7 +111,7 @@ a {
 }
 
 @media only screen and (max-width: 60em) {
-  .grid-three {
+  .grid-two, .grid-three {
 	grid-template-columns: 1fr;
   }
 
@@ -262,4 +273,12 @@ main {
   .events .button:hover {
 	background: #000;
 	color: #fff;
+  }
+
+  aside:first-child {
+	text-align: center;
+  }
+
+  aside .bg-image {
+	background-image: url("https://images.prismic.io/canalstreetmarket/74921c6bf0abf767666c52a6af3c001c58643587_group-11.jpg?auto=compress,format");
   }
