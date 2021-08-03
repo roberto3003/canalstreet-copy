@@ -7,24 +7,31 @@
 body, .navigation {
   height: 100%;
   display: flex;
-  flex-direction: row-reverse;
 }
+
 
 h1, h2, h3, h4, p {
   font-weight: 100;
 }
 
+
+.logo {
+  width: 60px;
+  position: absolute;
+  left: 0;
+}
+
 .header {
   margin-inline-start: auto;
   width: min-content;
+  order: 3;
 }
 
-.navigation {
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    right: 0;
-  }
+.container {
+  width: 90%;
+  margin-inline: auto;
+  min-width: 300px;
+}
 
 .nav-link  {
   padding: 60px 5px;
@@ -33,9 +40,12 @@ h1, h2, h3, h4, p {
   width: 60px;
   position: relative;
   cursor:   pointer;
-
-
 }
+
+.nav-link .sticky {
+    position: sticky;
+    top: 50vh;
+  }
 
 .nav-link a {
   position: absolute;
@@ -54,6 +64,10 @@ h1, h2, h3, h4, p {
 }
 .food {
   background-color: lightskyblue;
+}
+
+main {
+  order: 2;
 }
 
 .h1 {
