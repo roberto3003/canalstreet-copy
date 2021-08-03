@@ -99,7 +99,7 @@ a {
   grid-column-gap: var(--gap);
 }
 
-@media only screen and (max-width: 50em) {
+@media only screen and (max-width: 60em) {
   .grid-three {
 	grid-template-columns: 1fr;
   }
@@ -201,7 +201,7 @@ main {
   .market-events {
 	text-align: center;
   }
-
+ 
   .market-events h2 {
 	margin-inline: auto;
 	margin-block-start: var(--margin);
@@ -211,10 +211,7 @@ main {
 	padding-block: calc(var(--padding)*4);
 	padding-inline: var(--padding);
 	position: relative;
-  }
-
-  .market-events .events {
-	padding-block: calc(var(--padding)*4);
+  	padding-block: calc(var(--padding)*4);
 	padding-inline: var(--padding);
 	position: relative;
 	background-image: linear-gradient(90deg,currentcolor 50%,transparent 0),linear-gradient(90deg,currentcolor 50%,transparent 0),linear-gradient(90deg,currentcolor 50%,transparent 0),linear-gradient(90deg,currentcolor 50%,transparent 0);
@@ -223,12 +220,7 @@ main {
 	background-size: 24px 1px,24px 1px,24px 1px,24px 1px;
   }
 
-
-  .market-events-2 .event {
-	text-align: center;
-  }
-
-  
+ 
 
 
 @media only screen and (max-width: 50em) {
@@ -240,5 +232,10 @@ main {
 	margin-block: var(--gap);
   }
 }
+
+
+  .event {
+	text-align: center;
+  }
 
 
