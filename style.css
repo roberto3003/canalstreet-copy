@@ -94,13 +94,20 @@ a {
 
 
 .grid-three {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
   grid-template-columns: repeat(3,1fr);
-  grid-column-gap: 60px;
+  grid-column-gap: var(--gap);
 }
 
+@media only screen and (max-width: 50em) {
+  .grid-three {
+	grid-template-columns: 1fr;
+  }
+
+  .grid-three > * {
+	margin-block: var(--gap);
+  }
+}
 
 
 .navigation {
@@ -211,3 +218,21 @@ main {
 	animation: .8s infinite normal c;
 	animation-timing-function: linear;
   }
+
+
+  .market-events-2 .event {
+	text-align: center;
+  }
+
+
+@media only screen and (max-width: 50em) {
+  .events {
+	background-image: none;
+  }
+
+  .event {
+	margin-block: var(--gap);
+  }
+}
+
+
