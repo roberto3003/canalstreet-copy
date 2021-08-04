@@ -125,6 +125,22 @@ a {
   place-items: center;
 }
 
+.button {
+  text-align: center;
+  margin-inline: auto;
+  padding: 20px;
+  width: 180px;
+  background: #fff;
+  border: 1px solid #000;
+  transition: background .6s cubic-bezier(.23,1,.32,1),color .6s cubic-bezier(.23,1,.32,1);
+}
+
+.button:hover {
+  background: #000;
+  color: #fff;
+}
+
+
 .navigation {
   height: 100%;
   display: flex;
@@ -263,20 +279,10 @@ main {
   }
 
 .events .button {
-    padding: 20px;
-    width: 180px;
     position: absolute;
     bottom: -20px;
     left: 50%;
     transform: translateX(-50%);
-    background: #fff;
-    border: 1px solid #000;
-	transition: background .6s cubic-bezier(.23,1,.32,1),color .6s cubic-bezier(.23,1,.32,1);
-  }
-
-  .events .button:hover {
-	background: #000;
-	color: #fff;
   }
 
   aside {
@@ -323,3 +329,7 @@ main {
 	width: 100%;
   }
 
+  .vendor {
+	display: grid;
+	justify-content: center;
+  }
