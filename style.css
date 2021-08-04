@@ -105,6 +105,11 @@ a {
   order: 3;
 }
 
+.grid-one {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
 .grid-two {
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -339,7 +344,6 @@ main {
   .vendor {
 	display: grid;
 	justify-content: center;
-	text-align: center;
 	padding: 60px;
 	background-image: repeating-linear-gradient(-74deg,rgba(0,0,0,.2),rgba(0,0,0,.2) 1px,transparent 0,transparent 4px),repeating-linear-gradient(-74deg,rgba(0,0,0,.2),rgba(0,0,0,.2) 1px,transparent 0,transparent 4px);
 	background-position: 0 0,0 100%;
@@ -349,5 +353,9 @@ main {
   }
 
   .vendor h4 {
-	margin-block-end: var(--margin);
+	text-align: center;
+	margin: 0 auto var(--margin);
   }
+
+
+
