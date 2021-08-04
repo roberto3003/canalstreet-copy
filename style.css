@@ -377,5 +377,10 @@ main {
 	position: relative;
   }
 
+  .footer__row-item, .footer__row-item a {
+	text-align: center;
+  }
 
-
+  .footer__row-item:hover {
+    animation-play-state: running;
+}
