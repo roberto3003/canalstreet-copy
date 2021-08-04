@@ -1,6 +1,6 @@
 :root {
   --line-h: 1.5;
-  --height: 1.5em;
+  --height: 1.5rem;
   --margin: calc(var(--height)*1);
   --padding: calc(var(--height)*1);
   --gap: var(--height);
@@ -218,8 +218,8 @@ main {
   }
  
   .market-events h2 {
+	padding-block: calc(var(--padding)/2);
 	margin-inline: auto;
-	margin-block-start: var(--margin);
   }
 
 .events {
@@ -280,6 +280,7 @@ main {
   }
 
   aside {
+	padding-block: calc(var(--padding)*4);
 	justify-items: center;
   }
 
@@ -287,11 +288,34 @@ main {
 	text-align: center;
   }
 
-  aside .bg-image {
-	background-image: url("https://images.prismic.io/canalstreetmarket/74921c6bf0abf767666c52a6af3c001c58643587_group-11.jpg?auto=compress,format");
+  aside a {
+	padding: 1px;
+	height: 100%;
+	background-image: linear-gradient(90deg,#000 50%,transparent 0),linear-gradient(90deg,#000 50%,transparent 0),linear-gradient(180deg,#000 50%,transparent 0),linear-gradient(180deg,#000 50%,transparent 0);
+	background-position: 0 0,0 100%,0 0,100% 0;
+	background-repeat: repeat-x,repeat-x,repeat-y,repeat-y;
+	background-size: 30px 1px,30px 1px,1px 30px,1px 30px;
+	animation: .4s infinite normal a;
+	animation-timing-function: linear;
+	animation-play-state: paused;	
+  }
+
+  aside a:hover {
+	animation-play-state: running;	
+  }
+
+
+  @keyframes a {
+	0% {
+	  background-position: 0 0,0 100%,0 0,100% 0;
+	}
+	100% {
+	  background-position: 30px 0,-30px 100%,0 -30px,100% 30px;
+	}
   }
 
   aside .bg-image {
+	background-image: url("https://images.prismic.io/canalstreetmarket/74921c6bf0abf767666c52a6af3c001c58643587_group-11.jpg?auto=compress,format");
 	background-position: 50%;
 	background-size: cover;
 	background-repeat: no-repeat;
