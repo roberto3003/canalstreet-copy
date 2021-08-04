@@ -120,6 +120,10 @@ a {
   }
 }
 
+.gc {
+  display: grid;
+  place-items: center;
+}
 
 .navigation {
   height: 100%;
@@ -275,6 +279,10 @@ main {
 	color: #fff;
   }
 
+  aside {
+	justify-items: center;
+  }
+
   aside:first-child {
 	text-align: center;
   }
@@ -282,3 +290,12 @@ main {
   aside .bg-image {
 	background-image: url("https://images.prismic.io/canalstreetmarket/74921c6bf0abf767666c52a6af3c001c58643587_group-11.jpg?auto=compress,format");
   }
+
+  aside .bg-image {
+	background-position: 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 33.3vh;
+	width: 100%;
+  }
+
